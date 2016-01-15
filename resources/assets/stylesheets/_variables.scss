@@ -1,0 +1,50 @@
+/* Paths
+   ========================================================================== */
+
+$path-base:   '/assets';
+$path-fonts:  '#{$path-base}/fonts';
+$path-images: '#{$path-base}/images';
+
+/* Fonts
+   ========================================================================== */
+
+/**
+ * @require {variable} $georgia
+ * @require {variable} $helvetica
+ * @require {variable} $monospace
+ */
+
+$font-serif:      $georgia;
+$font-sans-serif: $helvetica;
+$font-monospace:  $monospace;
+
+$font-base: $font-sans-serif;
+
+/* Breakpoints
+   ========================================================================== */
+
+$screen-xs-max: 600px;
+$screen-sm-min: $screen-xs-max + 1;
+$screen-sm-max: 1000px;
+$screen-md-min: $screen-sm-max + 1;
+$screen-md-max: 1280px;
+$screen-lg-min: $screen-md-max + 1;
+$screen-lg-max: 1600px;
+$screen-xl-min: $screen-lg-max + 1;
+
+/**
+ * Breakpoints
+ *
+ * It is used by `mixins.scss` for Media Query generation.
+ *
+ * @see https://www.google.com/design/spec/layout/adaptive-ui.html
+ *
+ * @type {map}
+ */
+$breakpoints: (
+    xs: 'screen and (max-width: #{$screen-xs-max})',
+    sm: 'screen and (max-width: #{$screen-sm-max})',
+    md: 'screen and (max-width: #{$screen-md-max})',
+    lg: 'screen and (max-width: #{$screen-lg-max})',
+    xl: 'screen and (min-width: #{$screen-xl-min})'
+);
