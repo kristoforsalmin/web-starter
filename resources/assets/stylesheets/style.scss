@@ -1,0 +1,42 @@
+@import 'dependencies';
+
+/* Fonts
+   ========================================================================== */
+
+//
+
+/* General
+   ========================================================================== */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    //
+}
+
+/**
+ * Typography
+ */
+
+a {
+    //
+
+    &[class*="js"] {
+        text-decoration: inherit;
+        cursor: pointer;
+    }
+}
+
+/* Utilities, components
+   ========================================================================== */
+
+//
