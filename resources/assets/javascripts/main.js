@@ -1,5 +1,3 @@
-var $ = require('jquery');
-
-$(function() {
-  console.log('DOMContentLoaded');
+document.addEventListener('DOMContentLoaded', function(event) {
+  console.log(event.type);
 });

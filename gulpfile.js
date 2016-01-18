@@ -120,7 +120,7 @@ gulp.task('serve', ['javascripts', 'stylesheets', 'images', 'fonts', 'views'], (
   gulp.watch(config.fonts.paths.src,       ['fonts',  browserSync.reload]);
 });
 
-gulp.task('javascripts', (callback) => {
+gulp.task('javascripts', () => {
   let initial = false;
 
   webpack(config.javascripts).watch(200, (error, stats) => {
@@ -129,8 +129,6 @@ gulp.task('javascripts', (callback) => {
 
     if (!initial) {
       initial = true;
-
-      callback();
     }
   });
 });
