@@ -3,10 +3,10 @@
 const browserSync = require('browser-sync');
 const changed     = require('gulp-changed');
 const del         = require('del');
-const ejs         = require('gulp-ejs');
 const gulp        = require('gulp');
 const htmlmin     = require('gulp-htmlmin');
 const imagemin    = require('gulp-imagemin');
+const nunjucks    = require('gulp-nunjucks');
 const sass        = require('gulp-sass');
 const webpack     = require('webpack');
 
@@ -46,12 +46,10 @@ const PATH_MODULES = './node_modules';
 
 const config = {
   serve: {
-    options: {
-      open:   false,
-      notify: false,
-      server: {
-        baseDir: PATH_DIST
-      }
+    open: false,
+    notify: false,
+    server: {
+      baseDir: PATH_DIST
     }
   },
 
@@ -75,7 +73,7 @@ const config = {
       src:  PATH_SRC  + '/assets/stylesheets/**',
       dist: PATH_DIST + '/assets/stylesheets'
     },
-    options: {
+    sass: {
       outputStyle: 'compressed',
       includePaths: [PATH_MODULES]
     }
@@ -86,7 +84,7 @@ const config = {
       src:  PATH_SRC  + '/assets/images/**',
       dist: PATH_DIST + '/assets/images'
     },
-    options: {
+    imagemin: {
       progressive: true,
       svgoPlugins: [{ removeViewBox: false }],
     }
@@ -103,6 +101,9 @@ const config = {
     paths: {
       src:  PATH_SRC + '/views/**',
       dist: PATH_DIST
+    },
+    htmlmin: {
+      collapseWhitespace: true
     }
   }
 };
@@ -112,7 +113,7 @@ const config = {
  */
 
 gulp.task('serve', ['javascripts', 'stylesheets', 'images', 'fonts', 'views'], () => {
-  browserSync(config.serve.options);
+  browserSync(config.serve);
 
   gulp.watch(config.stylesheets.paths.src, ['stylesheets']);
   gulp.watch(config.images.paths.src,      ['images', browserSync.reload]);
@@ -136,7 +137,7 @@ gulp.task('javascripts', () => {
 gulp.task('stylesheets', () => {
   return gulp.src(config.stylesheets.paths.src)
     .pipe(changed(config.stylesheets.paths.src))
-    .pipe(sass(config.stylesheets.options))
+    .pipe(sass(config.stylesheets.sass))
     .on('error', streamError)
     .pipe(gulp.dest(config.stylesheets.paths.dist))
     .pipe(browserSync.stream());
@@ -145,7 +146,7 @@ gulp.task('stylesheets', () => {
 gulp.task('images', () => {
   return gulp.src(config.images.paths.src)
     .pipe(changed(config.images.paths.src))
-    .pipe(imagemin(config.images.options))
+    .pipe(imagemin(config.images.imagemin))
     .pipe(gulp.dest(config.images.paths.dist));
 });
 
@@ -158,9 +159,9 @@ gulp.task('fonts', () => {
 gulp.task('views', () => {
   return gulp.src(config.views.paths.src)
     .pipe(changed(config.views.paths.src))
-    .pipe(ejs())
+    .pipe(nunjucks.compile())
     .on('error', streamError)
-    .pipe(htmlmin())
+    .pipe(htmlmin(config.views.htmlmin))
     .pipe(gulp.dest(config.views.paths.dist));
 });
 
