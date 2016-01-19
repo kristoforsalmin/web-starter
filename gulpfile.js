@@ -122,15 +122,9 @@ gulp.task('serve', ['javascripts', 'stylesheets', 'images', 'fonts', 'views'], (
 });
 
 gulp.task('javascripts', () => {
-  let initial = false;
-
   webpack(config.javascripts).watch(200, (error, stats) => {
     compileError(error, stats);
     browserSync.reload();
-
-    if (!initial) {
-      initial = true;
-    }
   });
 });
 
