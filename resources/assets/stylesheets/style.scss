@@ -19,23 +19,6 @@ html {
     -webkit-font-smoothing: antialiased;
 }
 
-body {
-    //
-}
-
-/**
- * Typography
- */
-
-a {
-    //
-
-    &[class*="js"] {
-        text-decoration: inherit;
-        cursor: pointer;
-    }
-}
-
 /* Utilities, components
    ========================================================================== */
 
