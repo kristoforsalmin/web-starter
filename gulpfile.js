@@ -1,5 +1,3 @@
-'use strict';
-
 const browserSync = require('browser-sync');
 const changed     = require('gulp-changed');
 const del         = require('del');
@@ -17,8 +15,8 @@ const webpack     = require('webpack');
 function streamError(error) {
   console.log(error.toString());
 
-  if (this && this.emit) {
-    this.emit('end')
+  if (this.emit) {
+    this.emit('end');
   }
 }
 

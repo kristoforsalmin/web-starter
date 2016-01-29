@@ -6,11 +6,11 @@
  * @require {variable} $breakpoints
  */
 @mixin breakpoint($point) {
-    @each $name, $query in $breakpoints {
-        @if ($name == $point) {
-            @media #{$query} {
-                @content;
-            }
-        }
+  @each $name, $query in $breakpoints {
+    @if ($name == $point) {
+      @media #{$query} {
+        @content;
+      }
     }
+  }
 }

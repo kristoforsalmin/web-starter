@@ -40,9 +40,9 @@ $screen-xl-min: $screen-lg-max + 1;
  * @type {map}
  */
 $breakpoints: (
-    xs: 'screen and (max-width: #{$screen-xs-max})',
-    sm: 'screen and (max-width: #{$screen-sm-max})',
-    md: 'screen and (max-width: #{$screen-md-max})',
-    lg: 'screen and (max-width: #{$screen-lg-max})',
-    xl: 'screen and (min-width: #{$screen-xl-min})'
+  xs: 'screen and (max-width: #{$screen-xs-max})',
+  sm: 'screen and (max-width: #{$screen-sm-max})',
+  md: 'screen and (max-width: #{$screen-md-max})',
+  lg: 'screen and (max-width: #{$screen-lg-max})',
+  xl: 'screen and (min-width: #{$screen-xl-min})'
 );
