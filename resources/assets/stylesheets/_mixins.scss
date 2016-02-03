@@ -9,12 +9,6 @@
 ///     }
 ///   }
 ///
-///   .element {
-///     @include breakpoint(xs) {
-///       display: none;
-///     }
-///   }
-///
 /// @example css
 ///   @media screen and (max-width: 600px) {
 ///     .element {
