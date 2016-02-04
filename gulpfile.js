@@ -35,7 +35,7 @@ function compileError(error, stats) {
  */
 
 const PATH_SRC     = './resources';
-const PATH_DIST    = './public';
+const PATH_DEST    = './public';
 const PATH_MODULES = './node_modules';
 
 /**
@@ -47,58 +47,58 @@ const config = {
     open: false,
     notify: false,
     server: {
-      baseDir: PATH_DIST
+      baseDir: PATH_DEST
     }
   },
 
   javascripts: {
     entry: {
-      main: PATH_SRC + '/assets/javascripts/main.js'
+      main: `${PATH_SRC}/assets/javascripts/main.js`
     },
     output: {
-      path: PATH_DIST + '/assets/javascripts',
+      path: `${PATH_DEST}/assets/javascripts`,
       filename: '[name].js',
       chunkFilename: '[id].js'
     },
     plugins: [
       new webpack.optimize.UglifyJsPlugin()
-    ],
-    debug: true
+    ]
   },
 
   stylesheets: {
     paths: {
-      src:  PATH_SRC  + '/assets/stylesheets/**',
-      dist: PATH_DIST + '/assets/stylesheets'
+      src: `${PATH_SRC}/assets/stylesheets/**`,
+      dest: `${PATH_DEST}/assets/stylesheets`
     },
     sass: {
       outputStyle: 'compressed',
-      includePaths: [PATH_MODULES]
+      includePaths: [
+        PATH_MODULES
+      ]
     }
   },
 
   images: {
     paths: {
-      src:  PATH_SRC  + '/assets/images/**',
-      dist: PATH_DIST + '/assets/images'
+      src: `${PATH_SRC}/assets/images/**`,
+      dest: `${PATH_DEST}/assets/images`
     },
     imagemin: {
-      progressive: true,
-      svgoPlugins: [{ removeViewBox: false }],
+      progressive: true
     }
   },
 
   fonts: {
     paths: {
-      src:  PATH_SRC  + '/assets/fonts/**',
-      dist: PATH_DIST + '/assets/fonts'
+      src: `${PATH_SRC}/assets/fonts/**`,
+      dest: `${PATH_DEST}/assets/fonts`
     }
   },
 
   views: {
     paths: {
-      src:  PATH_SRC + '/views/**',
-      dist: PATH_DIST
+      src: `${PATH_SRC}/views/**`,
+      dest: PATH_DEST
     },
     htmlmin: {
       collapseWhitespace: true
@@ -131,7 +131,7 @@ gulp.task('stylesheets', () => {
     .pipe(changed(config.stylesheets.paths.src))
     .pipe(sass(config.stylesheets.sass))
     .on('error', streamError)
-    .pipe(gulp.dest(config.stylesheets.paths.dist))
+    .pipe(gulp.dest(config.stylesheets.paths.dest))
     .pipe(browserSync.stream());
 });
 
@@ -139,13 +139,13 @@ gulp.task('images', () => {
   return gulp.src(config.images.paths.src)
     .pipe(changed(config.images.paths.src))
     .pipe(imagemin(config.images.imagemin))
-    .pipe(gulp.dest(config.images.paths.dist));
+    .pipe(gulp.dest(config.images.paths.dest));
 });
 
 gulp.task('fonts', () => {
   return gulp.src(config.fonts.paths.src)
     .pipe(changed(config.fonts.paths.src))
-    .pipe(gulp.dest(config.fonts.paths.dist));
+    .pipe(gulp.dest(config.fonts.paths.dest));
 });
 
 gulp.task('views', () => {
@@ -154,11 +154,11 @@ gulp.task('views', () => {
     .pipe(nunjucks.compile())
     .on('error', streamError)
     .pipe(htmlmin(config.views.htmlmin))
-    .pipe(gulp.dest(config.views.paths.dist));
+    .pipe(gulp.dest(config.views.paths.dest));
 });
 
 gulp.task('clean', () => {
-  del([PATH_DIST + '/*']);
+  del([`${PATH_DEST}/*`]);
 });
 
 gulp.task('default', ['serve']);
