@@ -15,5 +15,9 @@
     "gulp-sass": "^2.1.1",
     "gulp": "^3.9.0",
     "webpack": "^1.12.11"
+  },
+  "devDependencies": {
+    "eslint-config-airbnb": "^5.0.0",
+    "eslint": "^1.10.3"
   }
 }

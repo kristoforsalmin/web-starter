@@ -1,12 +1,12 @@
 const browserSync = require('browser-sync');
-const changed     = require('gulp-changed');
-const del         = require('del');
-const gulp        = require('gulp');
-const htmlmin     = require('gulp-htmlmin');
-const imagemin    = require('gulp-imagemin');
-const nunjucks    = require('gulp-nunjucks');
-const sass        = require('gulp-sass');
-const webpack     = require('webpack');
+const changed = require('gulp-changed');
+const del = require('del');
+const gulp = require('gulp');
+const htmlmin = require('gulp-htmlmin');
+const imagemin = require('gulp-imagemin');
+const nunjucks = require('gulp-nunjucks');
+const sass = require('gulp-sass');
+const webpack = require('webpack');
 
 /**
  * Logging
@@ -22,11 +22,11 @@ function streamError(error) {
 
 function compileError(error, stats) {
   if (error) {
-    throw new error;
+    throw error;
   }
 
   if (stats.compilation.errors.length) {
-    stats.compilation.errors.forEach(error => streamError(error));
+    stats.compilation.errors.forEach(err => streamError(err));
   }
 }
 
@@ -34,8 +34,8 @@ function compileError(error, stats) {
  * Paths
  */
 
-const PATH_SRC     = './resources';
-const PATH_DEST    = './public';
+const PATH_SRC = './resources';
+const PATH_DEST = './public';
 const PATH_MODULES = './node_modules';
 
 /**
@@ -114,9 +114,9 @@ gulp.task('serve', ['javascripts', 'stylesheets', 'images', 'fonts', 'views'], (
   browserSync(config.serve);
 
   gulp.watch(config.stylesheets.paths.src, ['stylesheets']);
-  gulp.watch(config.images.paths.src,      ['images', browserSync.reload]);
-  gulp.watch(config.views.paths.src,       ['views',  browserSync.reload]);
-  gulp.watch(config.fonts.paths.src,       ['fonts',  browserSync.reload]);
+  gulp.watch(config.images.paths.src, ['images', browserSync.reload]);
+  gulp.watch(config.views.paths.src, ['views', browserSync.reload]);
+  gulp.watch(config.fonts.paths.src, ['fonts', browserSync.reload]);
 });
 
 gulp.task('javascripts', () => {
