@@ -128,7 +128,7 @@ gulp.task('javascripts', () => {
 
 gulp.task('stylesheets', () => {
   return gulp.src(config.stylesheets.paths.src)
-    .pipe(changed(config.stylesheets.paths.src))
+    .pipe(changed(config.stylesheets.paths.dest))
     .pipe(sass(config.stylesheets.sass))
     .on('error', streamError)
     .pipe(gulp.dest(config.stylesheets.paths.dest))
@@ -137,20 +137,20 @@ gulp.task('stylesheets', () => {
 
 gulp.task('images', () => {
   return gulp.src(config.images.paths.src)
-    .pipe(changed(config.images.paths.src))
+    .pipe(changed(config.images.paths.dest))
     .pipe(imagemin(config.images.imagemin))
     .pipe(gulp.dest(config.images.paths.dest));
 });
 
 gulp.task('fonts', () => {
   return gulp.src(config.fonts.paths.src)
-    .pipe(changed(config.fonts.paths.src))
+    .pipe(changed(config.fonts.paths.dest))
     .pipe(gulp.dest(config.fonts.paths.dest));
 });
 
 gulp.task('views', () => {
   return gulp.src(config.views.paths.src)
-    .pipe(changed(config.views.paths.src))
+    .pipe(changed(config.views.paths.dest))
     .pipe(nunjucks.compile())
     .on('error', streamError)
     .pipe(htmlmin(config.views.htmlmin))
