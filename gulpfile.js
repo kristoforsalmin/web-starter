@@ -9,28 +9,6 @@ const sass = require('gulp-sass');
 const webpack = require('webpack');
 
 /**
- * Logging
- */
-
-function streamError(error) {
-  console.log(error.toString());
-
-  if (this.emit) {
-    this.emit('end');
-  }
-}
-
-function compileError(error, stats) {
-  if (error) {
-    throw error;
-  }
-
-  if (stats.compilation.errors.length) {
-    stats.compilation.errors.forEach(err => streamError(err));
-  }
-}
-
-/**
  * Paths
  */
 
@@ -105,6 +83,28 @@ const config = {
     }
   }
 };
+
+/**
+ * Error Handling
+ */
+
+function streamError(error) {
+  console.log(error.toString());
+
+  if (typeof this.emit === 'function') {
+    this.emit('end');
+  }
+}
+
+function compileError(error, stats) {
+  if (error) {
+    throw error;
+  }
+
+  if (stats.hasErrors()) {
+    stats.compilation.errors.forEach(err => streamError(err));
+  }
+}
 
 /**
  * Tasks
