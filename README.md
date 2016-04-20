@@ -7,7 +7,6 @@ Gulp Starter is a starter template with Gulp.
 ### System requirements
 
 * Node.js >= 4.2.4
-* npm >= 2.14.12
 
 ## License
 
