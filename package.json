@@ -1,12 +1,11 @@
 {
   "name": "gulp-starter",
   "engines": {
-    "node": ">=4.2.4",
-    "npm": ">=2.14.12"
+    "node": ">=4.2.4"
   },
   "dependencies": {
-    "bourbon": "^4.2.6",
-    "browser-sync": "^2.11.1",
+    "bourbon": "^4.2.7",
+    "browser-sync": "^2.12.3",
     "del": "^2.2.0",
     "gulp-changed": "^1.3.0",
     "gulp-htmlmin": "^1.3.0",
@@ -14,10 +13,10 @@
     "gulp-nunjucks": "^2.2.0",
     "gulp-sass": "^2.2.0",
     "gulp": "^3.9.1",
-    "webpack": "^1.12.14"
+    "webpack": "^1.13.0"
   },
   "devDependencies": {
-    "eslint-config-airbnb": "^6.0.2",
-    "eslint": "^2.2.0"
+    "eslint-config-airbnb": "^7.0.0",
+    "eslint": "^2.8.0"
   }
 }
