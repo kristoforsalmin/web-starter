@@ -1,23 +1,30 @@
 {
   "name": "gulp-starter",
-  "engines": {
-    "node": ">=4.2.4"
-  },
   "dependencies": {
-    "bourbon": "^4.2.7"
+    "bourbon": "^5.0.0-beta.6"
   },
   "devDependencies": {
-    "browser-sync": "^2.12.8",
-    "del": "^2.2.0",
+    "autoprefixer": "^6.3.6",
+    "babel-core": "^6.9.1",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "browser-sync": "^2.13.0",
+    "del": "^2.2.1",
     "eslint-config-airbnb-base": "^3.0.1",
-    "eslint-plugin-import": "^1.8.0",
-    "eslint": "^2.10.2",
-    "gulp-changed": "^1.3.0",
+    "eslint-loader": "^1.3.0",
+    "eslint-plugin-import": "^1.9.2",
+    "eslint": "^2.13.1",
     "gulp-htmlmin": "^2.0.0",
     "gulp-imagemin": "^3.0.1",
     "gulp-nunjucks": "^2.2.0",
-    "gulp-sass": "^2.3.1",
+    "gulp-postcss": "^6.1.1",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-util": "^3.0.7",
     "gulp": "^3.9.1",
-    "webpack": "^1.13.1"
+    "webpack": "^2.1.0-beta.14"
+  },
+  "engines": {
+    "node": ">=5.0.0"
   }
 }

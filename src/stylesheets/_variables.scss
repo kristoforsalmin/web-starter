@@ -8,9 +8,9 @@ $path-images: '#{$path-base}/images';
 /* Fonts
    ========================================================================== */
 
-$font-serif:      $georgia;
-$font-sans-serif: $helvetica;
-$font-monospace:  $monospace;
+$font-serif:      $font-stack-georgia;
+$font-sans-serif: $font-stack-helvetica;
+$font-monospace:  $font-stack-consolas;
 
 $font-base: $font-sans-serif;
 
