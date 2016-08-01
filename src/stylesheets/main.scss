@@ -1,25 +1,5 @@
-@import 'dependencies';
+@import "bourbon";
 
-/* Fonts
-   ========================================================================== */
-
-//
-
-/* General
-   ========================================================================== */
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-html {
-  font-size: 100%;
-  -webkit-font-smoothing: antialiased;
-}
-
-/* Utilities, components
-   ========================================================================== */
-
-//
+@import "base/elements";
+@import "base/mixins";
+@import "base/variables";

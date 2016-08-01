@@ -1,9 +1,5 @@
 {
   "name": "gulp-starter",
-  "scripts": {
-    "start": "./node_modules/.bin/gulp",
-    "gulp": "./node_modules/.bin/gulp"
-  },
   "dependencies": {
     "bourbon": "^5.0.0-beta.6"
   },

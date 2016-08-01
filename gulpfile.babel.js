@@ -14,7 +14,7 @@ import sourcemaps from 'gulp-sourcemaps';
 import webpack from 'webpack';
 
 function isProduction() {
-  return process.env.NODE_ENV || 'development';
+  return process.env.NODE_ENV === 'production';
 }
 
 function streamError(error) {
