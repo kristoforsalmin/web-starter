@@ -1,16 +1,16 @@
 /* Paths
    ========================================================================== */
 
-$path-base:   '';
-$path-fonts:  '#{$path-base}/fonts';
-$path-images: '#{$path-base}/images';
+$path-base: "";
+$path-fonts: "#{$path-base}/fonts";
+$path-images: "#{$path-base}/images";
 
 /* Fonts
    ========================================================================== */
 
-$font-serif:      $font-stack-georgia;
+$font-serif: $font-stack-georgia;
 $font-sans-serif: $font-stack-helvetica;
-$font-monospace:  $font-stack-consolas;
+$font-monospace: $font-stack-consolas;
 
 $font-base: $font-sans-serif;
 
@@ -32,9 +32,9 @@ $screen-xl-min: $screen-lg-max + 1;
 ///
 /// @type {map}
 $breakpoints: (
-  xs: 'screen and (max-width: #{$screen-xs-max})',
-  sm: 'screen and (max-width: #{$screen-sm-max})',
-  md: 'screen and (max-width: #{$screen-md-max})',
-  lg: 'screen and (max-width: #{$screen-lg-max})',
-  xl: 'screen and (min-width: #{$screen-xl-min})'
+  xs: "screen and (max-width: #{$screen-xs-max})",
+  sm: "screen and (max-width: #{$screen-sm-max})",
+  md: "screen and (max-width: #{$screen-md-max})",
+  lg: "screen and (max-width: #{$screen-lg-max})",
+  xl: "screen and (min-width: #{$screen-xl-min})"
 );
