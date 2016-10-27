@@ -29,7 +29,7 @@ $screen-xl-min: 1920px;
 /// @type {map}
 $breakpoints: (
   sm: "screen and (min-width: #{$screen-sm-min})",
-  md: "screen and (max-width: #{$screen-md-min})",
-  lg: "screen and (max-width: #{$screen-lg-min})",
+  md: "screen and (min-width: #{$screen-md-min})",
+  lg: "screen and (min-width: #{$screen-lg-min})",
   xl: "screen and (min-width: #{$screen-xl-min})"
 );
