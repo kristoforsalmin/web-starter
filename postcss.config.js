@@ -1,4 +1,5 @@
 module.exports = {
+  map: true,
   use: [
     'postcss-import',
     'autoprefixer',
