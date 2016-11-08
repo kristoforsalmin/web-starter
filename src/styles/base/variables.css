@@ -1,7 +1,5 @@
-/* http://www.cssfontstack.com/ */
+/* http://www.cssfontstack.com */
 :root {
-  --font-family-serif: Georgia, Times, "Times New Roman", serif;
-  --font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --font-family-monospace: Consolas, monaco, monospace;
-  --font-family-base: var(--font-family-sans-serif);
+  --font-family-helvetica: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-family-base: var(--font-family-helvetica);
 }

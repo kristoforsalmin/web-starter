@@ -1,7 +1,7 @@
-@import "base/custom-media";
-@import "base/variables";
-@import "base/elements";
-
 @import "suitcss-base";
 @import "suitcss-components-grid";
 @import "suitcss-utils";
+
+@import "./base/custom-media.css";
+@import "./base/elements.css";
+@import "./base/variables.css";
