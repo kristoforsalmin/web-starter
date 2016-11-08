@@ -1,0 +1,4 @@
+/* https://material.google.com/layout/responsive-ui.html#responsive-ui-breakpoints */
+@custom-media --sm-viewport (min-width: 600px);
+@custom-media --md-viewport (min-width: 960px);
+@custom-media --lg-viewport (min-width: 1280px);
