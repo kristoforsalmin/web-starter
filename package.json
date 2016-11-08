@@ -4,7 +4,7 @@
     "build": "npm run compile && npm run compress && npm run copy",
     "clean": "rm -rv ./dist/*",
     "compile:scripts": "webpack ./src/scripts/main.js ./dist/scripts/main.js",
-    "compile:styles": "postcss -c ./postcss.config.js -m -d ./dist/styles ./src/styles/*.css",
+    "compile:styles": "postcss -c ./postcss.config.js -d ./dist/styles ./src/styles/*.css",
     "compile": "npm run compile:scripts && npm run compile:styles",
     "compress:images": "imagemin ./src/images/* --out-dir=./dist/images",
     "compress:scripts": "uglifyjs ./dist/scripts/main.js > ./dist/scripts/main.min.js",
