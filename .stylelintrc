@@ -1,6 +1,3 @@
 {
-  "extends": "stylelint-config-suitcss",
-  "rules": {
-    "declaration-block-properties-order": null
-  }
+  "extends": "stylelint-config-standard"
 }
