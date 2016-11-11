@@ -1,6 +1,4 @@
-# Gulp Starter [![Dependency Status](https://david-dm.org/racse1/gulp-starter.svg)](https://david-dm.org/racse1/gulp-starter) [![devDependency Status](https://david-dm.org/racse1/gulp-starter/dev-status.svg)](https://david-dm.org/racse1/gulp-starter#info=devDependencies)
-
-Gulp Starter is a starter template with Gulp.
+# Starter [![Dependency Status](https://david-dm.org/racse1/starter.svg)](https://david-dm.org/racse1/starter) [![devDependency Status](https://david-dm.org/racse1/starter/dev-status.svg)](https://david-dm.org/racse1/starter#info=devDependencies)
 
 ## Getting started
 
