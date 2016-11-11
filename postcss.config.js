@@ -1,4 +1,5 @@
 module.exports = {
+  log: true,
   map: true,
   use: [
     'postcss-import',
