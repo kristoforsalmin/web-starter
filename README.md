@@ -6,7 +6,7 @@ Web Starter is a simple web development toolset.
 
 | Feature | Tools Used |
 |---------|------------|
-| CSS | [PostCSS](http://postcss.org/) (Autoprefixer, postcss-custom-media, postcss-custom-properties, postcss-import), [clean-css](https://github.com/jakubpawlowicz/clean-css), [SUIT CSS](https://suitcss.github.io/) (suitcss-base, suitcss-components-grid, suitcss-utils) |
+| CSS | [PostCSS](http://postcss.org/) (Autoprefixer, postcss-csso, postcss-custom-media, postcss-custom-properties, postcss-import), [CSSO](https://github.com/css/csso), [SUIT CSS](https://suitcss.github.io/) (suitcss-base, suitcss-components-grid, suitcss-utils) |
 | JavaScript | [webpack](https://webpack.github.io/), [Babel](https://babeljs.io/) (ES2015 preset), [UglifyJS](http://lisperator.net/uglifyjs/) |
 | Images | [imagemin](https://github.com/imagemin/imagemin) |
 | Code Linting | [stylelint](http://stylelint.io/) (stylelint-config-standard), [ESLint](http://eslint.org/) (eslint-config-airbnb-base) |
@@ -34,7 +34,7 @@ To start watching all resources and updating connected browsers run:
 npm run serve
 ```
 
-Additionally you can have a look at the [`scripts` property](https://github.com/racse1/web-starter/blob/master/package.json#L2-L22) of the `package.json` for more information about available commands.
+Additionally you can have a look at the [`scripts` property](https://github.com/racse1/web-starter/blob/master/package.json#L2-L19) of the `package.json` for more information about available commands.
 
 ## Acknowledgements
 
