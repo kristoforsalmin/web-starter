@@ -34,7 +34,7 @@ To start watching all resources and updating connected browsers run:
 npm run serve
 ```
 
-Additionally you can have a look at the [`scripts` property](https://github.com/racse1/web-starter/blob/master/package.json#L2-L19) of the `package.json` for more information about available commands.
+Additionally you can have a look at the [`scripts` property](https://github.com/racse1/web-starter/blob/master/package.json#L2-L20) of the `package.json` for more information about available commands.
 
 ## Acknowledgements
 
