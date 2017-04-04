@@ -6,10 +6,10 @@ Web Starter is a simple web development toolset.
 
 | Feature | Tools Used |
 |---------|------------|
-| CSS | [PostCSS](http://postcss.org/) (Autoprefixer, postcss-csso, postcss-custom-media, postcss-custom-properties, postcss-import), [CSSO](https://github.com/css/csso), [SUIT CSS](https://suitcss.github.io/) (suitcss-base, suitcss-components-grid, suitcss-utils) |
-| JavaScript | [webpack](https://webpack.github.io/), [Babel](https://babeljs.io/) (ES2015 preset), [UglifyJS](http://lisperator.net/uglifyjs/) |
+| CSS | [PostCSS](http://postcss.org/), [CSSO](https://github.com/css/csso), [SUIT CSS](https://suitcss.github.io/) |
+| JavaScript | [webpack](https://webpack.github.io/), [Babel](https://babeljs.io/), [UglifyJS](http://lisperator.net/uglifyjs/) |
 | Images | [imagemin](https://github.com/imagemin/imagemin) |
-| Code Linting | [stylelint](http://stylelint.io/) (stylelint-config-standard), [ESLint](http://eslint.org/) (eslint-config-airbnb-base) |
+| Code Linting | [stylelint](http://stylelint.io/), [ESLint](http://eslint.org/) |
 | Live Updating | [Browsersync](https://browsersync.io/) |
 
 ## Installation
