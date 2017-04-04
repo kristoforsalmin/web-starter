@@ -1,15 +1,15 @@
 const UglifyJsPlugin = require('webpack/lib/optimize/UglifyJsPlugin');
 
+const debug = process.env.NODE_ENV !== 'production';
+
 module.exports = {
-  devtool: 'inline-source-map',
+  devtool: debug ? 'inline-source-map' : false,
   module: {
     loaders: [
       { test: /\.js$/, loader: 'babel-loader?presets[]=es2015', exclude: /node_modules/ },
     ],
   },
   plugins: [
-    new UglifyJsPlugin({
-      sourceMap: true,
-    }),
+    ...debug ? [] : [new UglifyJsPlugin()],
   ],
 };
