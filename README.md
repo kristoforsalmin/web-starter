@@ -6,9 +6,10 @@ Web Starter is a simple web development toolset.
 
 | Feature | Tools Used |
 |---------|------------|
+| HTML | [Pug](https://pugjs.org/) |
 | CSS | [PostCSS](http://postcss.org/), [CSSO](https://github.com/css/csso), [SUIT CSS](https://suitcss.github.io/) |
 | JavaScript | [webpack](https://webpack.github.io/), [Babel](https://babeljs.io/), [UglifyJS](http://lisperator.net/uglifyjs/) |
-| Images | [imagemin](https://github.com/imagemin/imagemin) |
+| Images | [imagemin](https://github.com/imagemin/imagemin), [svg-sprite](https://github.com/jkphl/svg-sprite) |
 | Code Linting | [stylelint](http://stylelint.io/), [ESLint](http://eslint.org/) |
 | Live Updating | [Browsersync](https://browsersync.io/) |
 
@@ -34,7 +35,7 @@ To start watching all resources and updating connected browsers run:
 npm run serve
 ```
 
-Additionally you can have a look at the [`scripts` property](https://github.com/racse1/web-starter/blob/master/package.json#L2-L20) of the `package.json` for more information about available commands.
+Additionally you can have a look at the [`scripts` property](https://github.com/racse1/web-starter/blob/master/package.json#L2-L21) of the `package.json` for more information about available commands.
 
 ## Acknowledgements
 
