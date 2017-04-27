@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "build": "npm run clean && npm run lint && npm run process && npm run copy",
+    "build": "NODE_ENV=production npm run clean && npm run lint && npm run process && npm run copy",
     "clean": "rm -rfv ./dist",
     "copy:fonts": "cp -rv ./src/fonts ./dist",
     "copy": "npm run copy:fonts",
@@ -9,7 +9,7 @@
     "lint": "npm run lint:scripts && npm run lint:styles",
     "process:icons": "svg-sprite -s --ss=icons --symbol-dest=./dist/images ./src/icons/*.svg",
     "process:images": "imagemin -o ./dist/images ./src/images/*",
-    "process:scripts": "webpack ./src/scripts/main.js ./dist/scripts/main.js",
+    "process:scripts": "webpack ./src/scripts/main.js ./dist/scripts/[name].js",
     "process:styles": "postcss -c ./postcss.config.js -d ./dist/styles ./src/styles/*.css",
     "process:templates": "pug -o ./dist ./src/templates",
     "process": "npm run process:icons && npm run process:images && npm run process:scripts && npm run process:styles && npm run process:templates",
@@ -27,7 +27,7 @@
   "devDependencies": {
     "autoprefixer": "^6.7.7",
     "babel-core": "^6.24.1",
-    "babel-loader": "^6.4.1",
+    "babel-loader": "^7.0.0",
     "babel-preset-es2015": "^6.24.1",
     "browser-sync": "^2.18.8",
     "concurrently": "^3.4.0",
@@ -35,7 +35,7 @@
     "eslint-plugin-import": "^2.2.0",
     "eslint": "^3.19.0",
     "imagemin-cli": "^3.0.0",
-    "postcss-cli": "^3.1.1",
+    "postcss-cli": "^3.2.0",
     "postcss-csso": "^2.0.0",
     "postcss-custom-media": "^5.0.1",
     "postcss-custom-properties": "^5.0.2",
