@@ -1,9 +1,7 @@
 {
   "scripts": {
-    "build": "NODE_ENV=production npm run clean && npm run lint && npm run process && npm run copy",
+    "build": "NODE_ENV=production npm run clean && npm run lint && npm run process",
     "clean": "rm -rfv ./dist",
-    "copy:fonts": "cp -rv ./src/fonts ./dist",
-    "copy": "npm run copy:fonts",
     "lint:scripts": "eslint ./src/scripts/**/*.js",
     "lint:styles": "stylelint ./src/styles/**/*.css",
     "lint": "npm run lint:scripts && npm run lint:styles",
@@ -20,12 +18,12 @@
     "watch": "concurrently -r \"npm run watch:scripts\" \"npm run watch:styles\" \"npm run watch:templates\""
   },
   "dependencies": {
-    "suitcss-base": "^2.0.0",
+    "suitcss-base": "^3.0.0",
     "suitcss-components-grid": "^3.0.3",
-    "suitcss-utils": "^2.0.0"
+    "suitcss-utils": "^3.0.0"
   },
   "devDependencies": {
-    "autoprefixer": "^6.7.7",
+    "autoprefixer": "^7.0.1",
     "babel-core": "^6.24.1",
     "babel-loader": "^7.0.0",
     "babel-preset-es2015": "^6.24.1",
@@ -35,16 +33,16 @@
     "eslint-plugin-import": "^2.2.0",
     "eslint": "^3.19.0",
     "imagemin-cli": "^3.0.0",
-    "postcss-cli": "^3.2.0",
+    "postcss-cli": "^4.0.0",
     "postcss-csso": "^2.0.0",
-    "postcss-custom-media": "^5.0.1",
+    "postcss-custom-media": "^6.0.0",
     "postcss-custom-properties": "^5.0.2",
     "postcss-import": "^9.1.0",
     "pug-cli": "^1.0.0-alpha6",
     "stylelint-config-standard": "^16.0.0",
     "stylelint": "^7.10.1",
     "svg-sprite": "^1.3.6",
-    "webpack": "^2.4.1"
+    "webpack": "^2.5.1"
   },
   "engines": {
     "node": ">=6.9.0"
