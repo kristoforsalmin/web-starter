@@ -1,4 +1,3 @@
-const DefinePlugin = require('webpack/lib/DefinePlugin');
 const UglifyJsPlugin = require('webpack/lib/optimize/UglifyJsPlugin');
 
 const debug = process.env.NODE_ENV !== 'production';
@@ -11,9 +10,6 @@ module.exports = {
     ],
   },
   plugins: [
-    new DefinePlugin({
-      __DEV__: debug,
-    }),
     ...debug ? [] : [new UglifyJsPlugin()],
   ],
 };
