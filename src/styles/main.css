@@ -1,6 +1,4 @@
 @import "suitcss-base";
-@import "suitcss-components-grid";
-@import "suitcss-utils";
 
 /* Base */
 @import "./base/custom-media.css";

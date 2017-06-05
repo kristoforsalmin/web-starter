@@ -6,7 +6,7 @@ module.exports = {
   devtool: debug ? 'inline-source-map' : false,
   module: {
     loaders: [
-      { test: /\.js$/, loader: 'babel-loader?presets[]=es2015', exclude: /node_modules/ },
+      { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
     ],
   },
   plugins: [
