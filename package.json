@@ -11,7 +11,7 @@
     "process:styles": "postcss -c postcss.config.js -d dist/styles src/styles/*.css",
     "process:templates": "pug -o dist src/templates",
     "process": "npm run process:icons && npm run process:images && npm run process:scripts && npm run process:styles && npm run process:templates",
-    "serve": "concurrently -r \"npm run watch\" \"browser-sync start -s dist -f dist --no-notify\"",
+    "serve": "concurrently -r \"npm run watch\" \"browser-sync start -c bs.config.js -s dist -f dist\"",
     "watch:scripts": "npm run process:scripts -- -w",
     "watch:styles": "npm run process:styles -- -w",
     "watch:templates": "npm run process:templates -- -w",
@@ -27,9 +27,9 @@
     "babel-preset-env": "^1.6.0",
     "browser-sync": "^2.18.13",
     "concurrently": "^3.5.0",
-    "eslint-config-airbnb-base": "^11.3.0",
+    "eslint-config-airbnb-base": "^11.3.1",
     "eslint-plugin-import": "^2.7.0",
-    "eslint": "^4.3.0",
+    "eslint": "^4.4.1",
     "imagemin-cli": "^3.0.0",
     "postcss-cli": "^4.1.0",
     "postcss-csso": "^2.0.0",
@@ -40,7 +40,7 @@
     "stylelint-config-standard": "^17.0.0",
     "stylelint": "^8.0.0",
     "svg-sprite": "^1.3.7",
-    "webpack": "^3.3.0"
+    "webpack": "^3.5.4"
   },
   "engines": {
     "node": ">=6.9.0"
