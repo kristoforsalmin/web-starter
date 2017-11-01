@@ -1,0 +1,16 @@
+/**
+ * Breakpoints
+ */
+
+@custom-media --sm-viewport (min-width: 600px);
+@custom-media --md-viewport (min-width: 960px);
+@custom-media --lg-viewport (min-width: 1280px);
+
+/**
+ * Fonts
+ */
+
+:root {
+  --fontFamilyHelvetica: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --fontFamilyBase: var(--fontFamilyHelvetica);
+}

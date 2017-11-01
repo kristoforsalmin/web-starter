@@ -1,6 +1,5 @@
 @import "suitcss-base";
 
 /* Base */
-@import "./base/custom-media.css";
 @import "./base/elements.css";
-@import "./base/variables.css";
+@import "./base/theme.css";
