@@ -5,7 +5,7 @@ const debug = process.env.NODE_ENV !== 'production';
 module.exports = {
   devtool: debug ? 'inline-source-map' : false,
   module: {
-    loaders: [
+    rules: [
       { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
     ],
   },
