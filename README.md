@@ -1,6 +1,6 @@
 # Web Starter
 
-[![Dependency Status](https://david-dm.org/racse1/web-starter.svg)](https://david-dm.org/racse1/web-starter) [![devDependency Status](https://david-dm.org/racse1/web-starter/dev-status.svg)](https://david-dm.org/racse1/web-starter#info=devDependencies)
+[![Dependency Status](https://img.shields.io/david/racse1/web-starter.svg)](https://david-dm.org/racse1/web-starter) [![devDependency Status](https://img.shields.io/david/dev/racse1/web-starter.svg)](https://david-dm.org/racse1/web-starter?type=dev)
 
 Web Starter is a simple web development toolset.
 
