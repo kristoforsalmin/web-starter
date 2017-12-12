@@ -1,9 +1,6 @@
 {
   "presets": [
-    ["env", {
-      "targets": {
-        "browsers": ["defaults", "not Explorer < 11"]
-      },
+    ["@babel/env", {
       "modules": false
     }]
   ]
