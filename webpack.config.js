@@ -1,8 +1,17 @@
-const UglifyJsPlugin = require('webpack/lib/optimize/UglifyJsPlugin');
+const path = require('path');
+const webpack = require('webpack');
 
 const debug = process.env.NODE_ENV !== 'production';
 
 module.exports = {
+  context: path.resolve(__dirname, 'src/scripts'),
+  entry: './main.js',
+  output: {
+    path: path.resolve(__dirname, 'dist/scripts'),
+    publicPath: '/scripts/',
+    filename: '[name].bundle.js',
+    chunkFilename: '[name].[chunkhash].chunk.js',
+  },
   devtool: debug ? 'cheap-module-eval-source-map' : false,
   module: {
     rules: [
@@ -10,6 +19,9 @@ module.exports = {
     ],
   },
   plugins: [
-    ...debug ? [] : [new UglifyJsPlugin()],
+    new webpack.EnvironmentPlugin({
+      NODE_ENV: 'development',
+    }),
+    ...debug ? [] : [new webpack.optimize.UglifyJsPlugin()],
   ],
 };
