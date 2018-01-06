@@ -19,9 +19,6 @@ module.exports = {
     ],
   },
   plugins: [
-    new webpack.EnvironmentPlugin({
-      NODE_ENV: 'development',
-    }),
     ...debug ? [] : [new webpack.optimize.UglifyJsPlugin()],
   ],
 };
