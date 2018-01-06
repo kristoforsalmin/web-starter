@@ -37,6 +37,22 @@ npm run serve
 
 Additionally you can have a look at the [`scripts` property](https://github.com/racse1/web-starter/blob/master/package.json#L2-L19) of the `package.json` for more information about available commands.
 
+## Usage with Docker
+
+First, build the image:
+
+```
+docker build -t web-starter .
+```
+
+Then create and run the container:
+
+```
+docker run -p 3000:3000 -p 3001:3001 web-starter
+```
+
+If no [command](https://docs.docker.com/engine/reference/run/#cmd-default-command-or-options) provided, `npm run serve` will be executed by default.
+
 ## Acknowledgements
 
 * [Web Starter Kit by Google](https://developers.google.com/web/tools/starter-kit/)
