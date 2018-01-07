@@ -23,13 +23,13 @@ npm install
 
 ## Usage
 
-To build all resources run:
+To build resources run:
 
 ```
 npm run build
 ```
 
-To start watching all resources and updating connected browsers run:
+To start static server and watch files for changes run:
 
 ```
 npm run serve
