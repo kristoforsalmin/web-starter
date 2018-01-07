@@ -11,11 +11,11 @@
     "process:styles": "postcss -c postcss.config.js -d dist/styles src/styles/*.css",
     "process:templates": "pug -o dist src/templates",
     "process": "npm run process:icons && npm run process:images && npm run process:scripts && npm run process:styles && npm run process:templates",
-    "serve": "concurrently -r \"npm run watch\" \"browser-sync start -c bs.config.js -s dist -f dist\"",
+    "serve": "npm run watch & browser-sync start -c bs.config.js -s dist -f dist",
     "watch:scripts": "npm run process:scripts -- -w",
     "watch:styles": "npm run process:styles -- -w",
     "watch:templates": "npm run process:templates -- -w",
-    "watch": "concurrently -r \"npm run watch:scripts\" \"npm run watch:styles\" \"npm run watch:templates\""
+    "watch": "npm run watch:scripts & npm run watch:styles & npm run watch:templates"
   },
   "dependencies": {
     "suitcss-base": "^4.0.0"
@@ -28,7 +28,6 @@
     "babel-eslint": "8.1.2",
     "babel-loader": "^8.0.0-beta.0",
     "browser-sync": "^2.23.3",
-    "concurrently": "^3.5.1",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.8.0",
     "eslint": "^4.14.0",
