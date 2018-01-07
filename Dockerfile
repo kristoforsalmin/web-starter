@@ -15,5 +15,8 @@ EXPOSE 3000 3001
 # Set NODE_ENV environment variable to "production"
 ENV NODE_ENV production
 
-# Serve app when the container launches
+# Build resources
+RUN npm run build
+
+# Start static server and watch files for changes when the container launches
 CMD ["npm", "run", "serve"]
