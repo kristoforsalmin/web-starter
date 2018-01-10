@@ -44,7 +44,7 @@
     "webpack": "^3.10.0"
   },
   "engines": {
-    "node": ">=6.9.0"
+    "node": ">=8.9.0"
   },
   "private": true
 }
