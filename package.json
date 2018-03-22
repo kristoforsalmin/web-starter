@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "postinstall": "cp .env.example .env"
+    "postinstall": "[ -e .env ] || cp .env.example .env"
   },
   "dependencies": {
     "suitcss-base": "^4.0.0"
