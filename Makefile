@@ -3,8 +3,8 @@ include .env
 export
 
 bin     := node_modules/.bin
-dest    := dist
 src     := src
+dest    := dist
 scripts := scripts
 styles  := styles
 images  := images
