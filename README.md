@@ -21,7 +21,7 @@ Additionally you will need to manually add Make and rsync:
 
 1. Go to [MSYS2 packages repository](http://repo.msys2.org/msys/x86_64/) and download latest versions of Make and rsync.
 2. Merge contents of `usr` folder from each archive into `C:\Program Files\Git\usr`.
-3. Open Git Bash and make sure that `make` and `rsync` commands are available.
+3. Open Git Bash and check that `make` and `rsync` commands are available.
 
 ## Installation
 
