@@ -73,7 +73,7 @@ watch-styles:
 	-$(postcss) -w
 
 watch-templates:
-	-$(pug) -w -w
+	-$(pug) -w
 
 copy:
 	rsync \
