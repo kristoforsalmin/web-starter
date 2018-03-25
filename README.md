@@ -45,7 +45,7 @@ To start static server and watch files for changes run:
 make serve
 ```
 
-Additionally you can have a look at the [`Makefile`](Makefile) for more information about available commands.
+Additionally you can take a look at the [`Makefile`](Makefile) for more information about available commands.
 
 ## Acknowledgements
 
