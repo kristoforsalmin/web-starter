@@ -29,51 +29,54 @@ build: clean lint process copy
 lint: lint-scripts lint-styles
 
 lint-scripts:
-	@$(bin)/eslint $(src)/$(scripts)/**
+	$(bin)/eslint $(src)/$(scripts)/**
 
 lint-styles:
-	@$(bin)/stylelint $(src)/$(styles)/**
+	$(bin)/stylelint $(src)/$(styles)/**
 
 process: process-scripts process-styles process-templates process-images process-icons
 
 process-scripts:
-	@$(webpack)
+	$(webpack)
 
 process-styles:
-	@$(postcss)
+	$(postcss)
 
 process-templates:
-	@$(pug)
+	$(pug)
 
 process-images:
-	@$(bin)/imagemin $(src)/$(images)/* -o $(dest)/$(images)
+	$(bin)/imagemin $(src)/$(images)/* -o $(dest)/$(images)
 
 process-icons:
-	@$(bin)/svg-sprite $(src)/$(icons)/* \
+	$(bin)/svg-sprite $(src)/$(icons)/* \
 		-s \
 		--ss=icons \
 		--symbol-dest=$(dest)/$(images)
 
 serve:
-	@make watch & $(bin)/browser-sync start \
+	$(MAKE) browser-sync & $(MAKE) watch
+
+browser-sync:
+	-$(bin)/browser-sync start \
 		-c bs.config.js \
 		-s $(dest) \
 		-f $(dest)
 
 watch:
-	@make watch-scripts & make watch-styles & make watch-templates
+	$(MAKE) watch-scripts & $(MAKE) watch-styles & $(MAKE) watch-templates
 
 watch-scripts:
-	@$(webpack) -w
+	-$(webpack) -w
 
 watch-styles:
-	@$(postcss) -w
+	-$(postcss) -w
 
 watch-templates:
-	@$(pug) -w
+	-$(pug) -w -w
 
 copy:
-	@rsync \
+	rsync \
 		-a \
 		-v \
 		--exclude $(scripts) \
@@ -84,6 +87,6 @@ copy:
 		$(src)/ $(dest)/
 
 clean:
-	@rm -r -v $(dest) || true
+	-rm -r -v $(dest)
 
-.PHONY: all build lint lint-scripts lint-styles process process-scripts process-styles process-templates process-images process-icons serve watch watch-scripts watch-styles watch-templates copy clean
+.PHONY: all build lint lint-scripts lint-styles process process-scripts process-styles process-templates process-images process-icons serve browser-sync watch watch-scripts watch-styles watch-templates copy clean
