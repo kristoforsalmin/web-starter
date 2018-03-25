@@ -8,10 +8,14 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) a
 
 ### Added
 
-* This `CHANGELOG.md` file.
-* Browserslist config that is used by Autoprefixer and babel-preset-env.
-* Docker support.
 * Dynamic imports support.
+* Docker support.
+* Browserslist config that is used by Autoprefixer and babel-preset-env.
+* This `CHANGELOG.md` file.
+
+### Changed
+
+* Start using Make for task automation instead of the `scripts` property of the `package.json`.
 
 ### Removed
 
