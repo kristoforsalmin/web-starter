@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) a
 
 ## [Unreleased]
 
+## 1.0.0 - 2018-03-27
+
 ### Added
 
 * Dynamic imports support.
@@ -21,4 +23,4 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) a
 
 * Usage of concurrently.
 
-[Unreleased]: https://github.com/racse1/web-starter/commits/master
+[Unreleased]: https://github.com/racse1/web-starter/compare/v1.0.0...HEAD
