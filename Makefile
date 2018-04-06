@@ -29,10 +29,10 @@ build: clean lint process copy
 lint: lint-scripts lint-styles
 
 lint-scripts:
-	$(bin)/eslint $(src)/$(scripts)/**
+	$(bin)/eslint $(src)/$(scripts)/**.js
 
 lint-styles:
-	$(bin)/stylelint $(src)/$(styles)/**
+	$(bin)/stylelint $(src)/$(styles)/**.css
 
 process: process-scripts process-styles process-templates process-images process-icons
 
