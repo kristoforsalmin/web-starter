@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) a
 
 ## [Unreleased]
 
+## [1.0.1] - 2018-04-06
+
+### Changed
+
+* Fix usage of ESLint and stylelint.
+
 ## 1.0.0 - 2018-03-27
 
 ### Added
@@ -23,4 +29,5 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) a
 
 * Usage of concurrently.
 
-[Unreleased]: https://github.com/racse1/web-starter/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/racse1/web-starter/compare/v1.0.1...HEAD
+[1.0.1]: https://github.com/racse1/web-starter/compare/v1.0.0...v1.0.1
