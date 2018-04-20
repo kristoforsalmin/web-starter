@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) a
 
 ## [Unreleased]
 
+## [1.0.2] - 2018-04-20
+
+### Changed
+
+* Fix usage of `rsync` in copy recipe.
+
 ## [1.0.1] - 2018-04-06
 
 ### Changed
@@ -31,3 +37,4 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) a
 
 [Unreleased]: https://github.com/racse1/web-starter/compare/v1.0.1...HEAD
 [1.0.1]: https://github.com/racse1/web-starter/compare/v1.0.0...v1.0.1
+[1.0.2]: https://github.com/racse1/web-starter/compare/v1.0.1...v1.0.2
