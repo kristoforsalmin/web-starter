@@ -79,11 +79,11 @@ copy:
 	rsync \
 		-a \
 		-v \
-		--exclude $(scripts) \
-		--exclude $(styles) \
-		--exclude $(images) \
-		--exclude $(icons) \
-		--exclude *.pug \
+		--exclude=$(scripts) \
+		--exclude=$(styles) \
+		--exclude=$(images) \
+		--exclude=$(icons) \
+		--exclude=*.pug \
 		$(src)/ $(dest)/
 
 clean:
