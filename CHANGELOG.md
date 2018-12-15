@@ -6,15 +6,20 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) a
 
 ## [Unreleased]
 
+### Changed
+
+* Fix usage of imagemin and svg-sprite. 
+
 ### Removed
 
 * Docker support.
+* Copy recipe.
 
 ## [1.0.2] - 2018-04-20
 
 ### Changed
 
-* Fix usage of `rsync` in copy recipe.
+* Fix usage of `rsync`.
 
 ## [1.0.1] - 2018-04-06
 

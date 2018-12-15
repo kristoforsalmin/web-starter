@@ -17,11 +17,11 @@ Web Starter is a simple web development toolset.
 
 This toolset uses some features of Unix-like operating systems. If you use Windows, please make sure you have Git Bash installed.
 
-Additionally you will need to manually add Make and rsync:
+Additionally you will need to manually add Make:
 
-1. Go to [MSYS2 packages repository](http://repo.msys2.org/msys/x86_64/) and download latest versions of Make and rsync.
-2. Merge contents of `usr` folder from each archive into `C:\Program Files\Git\usr`.
-3. Open Git Bash and check that `make` and `rsync` commands are available.
+1. Go to [MSYS2 package repository](http://repo.msys2.org/msys/x86_64/) and download latest version of Make.
+2. Merge contents of `usr` folder into `C:\Program Files\Git\usr`.
+3. Open Git Bash and check that `make` command is available.
 
 ## Installation
 
