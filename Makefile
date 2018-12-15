@@ -25,10 +25,7 @@ pug := $(bin)/pug -o $(dest) $(src)
 all: build
 
 browser-sync:
-	-$(bin)/browser-sync start \
-		-c bs.config.js \
-		-s $(dest) \
-		-f $(dest)
+	$(bin)/browser-sync start -s $(dest) -f $(dest)
 
 build: clean lint process
 
