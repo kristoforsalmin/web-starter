@@ -46,13 +46,14 @@ process-templates:
 	$(pug)
 
 process-images:
-	$(bin)/imagemin $(src)/$(images)/* -o $(dest)/$(images)
+	$(bin)/imagemin --out-dir=$(dest)/$(images) $(src)/$(images)/*
 
 process-icons:
-	$(bin)/svg-sprite $(src)/$(icons)/* \
+	$(bin)/svg-sprite \
 		-s \
-		--ss=icons \
-		--symbol-dest=$(dest)/$(images)
+		--symbol-dest=$(dest)/$(images) \
+		--symbol-sprite=icons \
+		$(src)/$(icons)/*
 
 serve:
 	$(MAKE) browser-sync & $(MAKE) watch
