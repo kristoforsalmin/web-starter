@@ -24,7 +24,7 @@ pug := $(bin)/pug -o $(dest) $(src)
 
 all: build
 
-build: clean lint process copy
+build: clean lint process
 
 lint: lint-scripts lint-styles
 
@@ -75,18 +75,7 @@ watch-styles:
 watch-templates:
 	-$(pug) -w
 
-copy:
-	rsync \
-		-a \
-		-v \
-		--exclude=$(scripts) \
-		--exclude=$(styles) \
-		--exclude=$(images) \
-		--exclude=$(icons) \
-		--exclude=*.pug \
-		$(src)/ $(dest)/
-
 clean:
 	-rm -r -v $(dest)
 
-.PHONY: all build lint lint-scripts lint-styles process process-scripts process-styles process-templates process-images process-icons serve browser-sync watch watch-scripts watch-styles watch-templates copy clean
+.PHONY: all build lint lint-scripts lint-styles process process-scripts process-styles process-templates process-images process-icons serve browser-sync watch watch-scripts watch-styles watch-templates clean
