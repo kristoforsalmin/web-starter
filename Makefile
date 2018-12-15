@@ -2,13 +2,13 @@ include .env
 
 export
 
-bin     := node_modules/.bin
-src     := src
-dest    := dist
+bin := node_modules/.bin
+src := src
+dest := dist
 scripts := scripts
-styles  := styles
-images  := images
-icons   := icons
+styles := styles
+images := images
+icons := icons
 
 webpack := $(bin)/webpack $(src)/$(scripts)/main.js \
 	--mode $(NODE_ENV) \
