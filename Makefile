@@ -24,7 +24,16 @@ pug := $(bin)/pug -o $(dest) $(src)
 
 all: build
 
+browser-sync:
+	-$(bin)/browser-sync start \
+		-c bs.config.js \
+		-s $(dest) \
+		-f $(dest)
+
 build: clean lint process
+
+clean:
+	-rm -r -v $(dest)
 
 lint: lint-scripts lint-styles
 
@@ -34,7 +43,17 @@ lint-scripts:
 lint-styles:
 	$(bin)/stylelint $(src)/$(styles)/**.css
 
-process: process-scripts process-styles process-templates process-images process-icons
+process: process-icons process-images process-scripts process-styles process-templates
+
+process-icons:
+	$(bin)/svg-sprite \
+		-s \
+		--symbol-dest=$(dest)/$(images) \
+		--symbol-sprite=icons \
+		$(src)/$(icons)/*
+
+process-images:
+	$(bin)/imagemin --out-dir=$(dest)/$(images) $(src)/$(images)/*
 
 process-scripts:
 	$(webpack)
@@ -45,24 +64,8 @@ process-styles:
 process-templates:
 	$(pug)
 
-process-images:
-	$(bin)/imagemin --out-dir=$(dest)/$(images) $(src)/$(images)/*
-
-process-icons:
-	$(bin)/svg-sprite \
-		-s \
-		--symbol-dest=$(dest)/$(images) \
-		--symbol-sprite=icons \
-		$(src)/$(icons)/*
-
 serve:
 	$(MAKE) browser-sync & $(MAKE) watch
-
-browser-sync:
-	-$(bin)/browser-sync start \
-		-c bs.config.js \
-		-s $(dest) \
-		-f $(dest)
 
 watch:
 	$(MAKE) watch-scripts & $(MAKE) watch-styles & $(MAKE) watch-templates
@@ -76,7 +79,4 @@ watch-styles:
 watch-templates:
 	-$(pug) -w
 
-clean:
-	-rm -r -v $(dest)
-
-.PHONY: all build lint lint-scripts lint-styles process process-scripts process-styles process-templates process-images process-icons serve browser-sync watch watch-scripts watch-styles watch-templates clean
+.PHONY: all browser-sync build clean lint lint-scripts lint-styles process process-icons process-images process-scripts process-styles process-templates serve watch watch-scripts watch-styles watch-templates
