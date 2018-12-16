@@ -6,24 +6,27 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) a
 
 ## [Unreleased]
 
-### Changed
-
-* Fix usage of imagemin and svg-sprite. 
+## [2.0.0] - 2018-12-16
 
 ### Removed
 
-* Docker support.
+* Browsersync config.
 * Copy recipe.
+* Docker support.
+
+### Fixed
+
+* Fix usage of imagemin and svg-sprite.
 
 ## [1.0.2] - 2018-04-20
 
-### Changed
+### Fixed
 
-* Fix usage of `rsync`.
+* Fix usage of rsync.
 
 ## [1.0.1] - 2018-04-06
 
-### Changed
+### Fixed
 
 * Fix usage of ESLint and stylelint.
 
@@ -33,8 +36,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) a
 
 * Dynamic imports support.
 * Docker support.
-* Browserslist config that is used by Autoprefixer and babel-preset-env.
 * This `CHANGELOG.md` file.
+* Browserslist config that is used by Autoprefixer and babel-preset-env.
 
 ### Changed
 
@@ -44,6 +47,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) a
 
 * Usage of concurrently.
 
-[Unreleased]: https://github.com/racse1/web-starter/compare/v1.0.1...HEAD
+[Unreleased]: https://github.com/racse1/web-starter/compare/v2.0.0...HEAD
 [1.0.1]: https://github.com/racse1/web-starter/compare/v1.0.0...v1.0.1
 [1.0.2]: https://github.com/racse1/web-starter/compare/v1.0.1...v1.0.2
+[2.0.0]: https://github.com/racse1/web-starter/compare/v1.0.2...v2.0.0
