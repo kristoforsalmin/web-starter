@@ -10,15 +10,17 @@ styles := styles
 images := images
 icons := icons
 
-webpack := $(bin)/webpack $(src)/$(scripts)/main.js \
+webpack := $(bin)/webpack \
 	--mode $(NODE_ENV) \
 	--output-path $(dest)/$(scripts) \
-	--output-public-path $(scripts)/
+	--output-public-path $(scripts)/ \
+	$(src)/$(scripts)/main.js
 
-postcss := $(bin)/postcss $(src)/$(styles)/main.css \
+postcss := $(bin)/postcss \
 	-c postcss.config.js \
 	-d $(dest)/$(styles) \
-	--verbose
+	--verbose \
+	$(src)/$(styles)/main.css
 
 pug := $(bin)/pug -o $(dest) $(src)
 
