@@ -1,4 +1,4 @@
-# Web Starter
+# [ARCHIVED] Web Starter
 
 [![Dependency Status](https://img.shields.io/david/racse1/web-starter.svg)](https://david-dm.org/racse1/web-starter) [![devDependency Status](https://img.shields.io/david/dev/racse1/web-starter.svg)](https://david-dm.org/racse1/web-starter?type=dev)
 
